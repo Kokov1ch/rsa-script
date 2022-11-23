@@ -42,7 +42,7 @@ class Manager
     }
     public function decrypt():string
     {
-        if (isset($this->decrypted) && isset($this->d) && isset($this->e))
+        if (isset($this->encrypted) && isset($this->d) && isset($this->e))
             return $this->rsa->decrypt($this->encrypted,$this->d, $this->n);
         else
             return 'Зашифрованный текст не найден!';

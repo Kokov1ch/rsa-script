@@ -63,7 +63,7 @@ class Rsa
             $big = gmp_init($value);
             $big = gmp_pow($big, $d);
             $big = gmp_mod($big, $n);
-            $result= strval($big);
+            $result= $result.chr(gmp_intval($big));
         }
         return $result;
     }
